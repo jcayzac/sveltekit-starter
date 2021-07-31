@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* purge start ignore */
+body {
+	@apply transition-colors duration-500;
+}
+
+body main {
+	@apply p-8 pt-32 md:pt-24 mx-auto max-w-4xl;
+	@apply text-center;
+}
+
+body a {
+	@apply text-accent dark:text-accent;
+	@apply no-underline hover:underline focus:outline-none focus:underline;
+}
+/* purge end ignore */

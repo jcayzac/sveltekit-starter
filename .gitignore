@@ -1,0 +1,10 @@
+.DS_Store
+/.husky
+/.svelte
+/.svelte-kit
+/build
+/functions
+/package
+node_modules
+package-lock.json
+yarn.lock

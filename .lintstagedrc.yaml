@@ -1,0 +1,8 @@
+---
+'**.{json,yaml,yml,md,mdx}':
+  - prettier --write --plugin-search-dir=.
+'**/.*rc':
+  - prettier --write --plugin-search-dir=.
+'**.{cjs,js,jsx,svelte,ts,tsx}':
+  - prettier --write --plugin-search-dir=.
+  - eslint --cache --fix --ignore-path .gitignore
