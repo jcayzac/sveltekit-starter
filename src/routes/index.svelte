@@ -1,8 +1,24 @@
+<script context="module" lang="ts">
+	export const prerender = true
+
+	export const load = async({ fetch }) => {
+		const response = await fetch(`./index.json`)
+		const { articles } = await response.json()
+		return {
+			props: {
+				articles,
+			}
+		}
+	}
+</script>
+
 <script lang="ts">
 	import Counter from '$lib/Counter.svelte'
 	import Timer from '$lib/Timer.svelte'
 	import ToggleTheme from '$lib/ToggleTheme.svelte'
 	import { theme } from '$lib/theme'
+
+	export let articles
 </script>
 
 <div class="card lg:card-side bordered">
@@ -23,3 +39,24 @@
 		</div>
 	</div>
 </div>
+
+<h2>Articles (Through endpoint)</h2>
+<ul>
+	{#each articles as {slug, title}}
+		<li><a href="{slug}">{title}</a></li>
+	{/each}
+</ul>
+
+<!-- a href="./boooooooooooooooooo">booooooooo</a -->
+
+<figure class="mockup-code" data-title="boo">
+	<pre data-prefix="1">
+    <code>npm i daisyui</code>
+  </pre>
+	<pre data-prefix="2">
+    <code>installing...</code>
+  </pre>
+	<pre data-prefix="3" class="bg-warning text-neutral">
+    <code>Error!</code>
+  </pre>
+</figure>

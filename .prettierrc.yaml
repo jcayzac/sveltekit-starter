@@ -22,3 +22,8 @@ overrides:
       - '*.cjs'
     options:
       parser: meriyah
+  - files:
+      - '*.mdx'
+      - '*.svx'
+    options:
+      parser: markdown

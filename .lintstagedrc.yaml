@@ -1,5 +1,5 @@
 ---
-'**.{json,yaml,yml,md,mdx}':
+'**.{json,yaml,yml,md,mdx,svx}':
   - prettier --write --plugin-search-dir=.
 '**/.*rc':
   - prettier --write --plugin-search-dir=.

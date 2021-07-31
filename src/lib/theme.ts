@@ -1,6 +1,5 @@
+import { browser } from '$app/env'
 import { readable, writable, derived, Readable } from 'svelte/store'
-
-const { matchMedia, localStorage } = globalThis
 
 // Returns 'light' if the media query list / event matches
 function ligthIfMatch(event: MediaQueryList | MediaQueryListEvent) {
@@ -9,7 +8,7 @@ function ligthIfMatch(event: MediaQueryList | MediaQueryListEvent) {
 
 // OS default color scheme
 export const preferredColorScheme = readable('dark', set => {
-	if (matchMedia === undefined)
+	if (!browser)
 		return () => {
 			/* SSR */
 		}
@@ -26,7 +25,7 @@ export const preferredColorScheme = readable('dark', set => {
 // LocalStorage-backed override
 export const themeOverride = writable<string | undefined>()
 
-if (localStorage !== undefined) {
+if (browser) {
 	const THEME_KEY = 'theme'
 
 	// Save updates to local storage
