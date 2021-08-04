@@ -5,6 +5,7 @@
 /build
 /functions
 /package
+/static/g
 node_modules
 package-lock.json
 yarn.lock

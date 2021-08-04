@@ -1,1 +1,1 @@
-<li><slot /></li>
+<li data-foo="1"><slot /></li>

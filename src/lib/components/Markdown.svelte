@@ -1,12 +1,15 @@
 <script context="module" lang="ts">
 	import p from './Li2.svelte'
 	import li from './Li.svelte'
-	export { li, p }
+	export { p, li }
 </script>
 
 <script>
-	const { title } = $$props
+	export let title
+	export let hero
 </script>
+
+<img alt="hero" srcset={hero.srcSet} sizes={hero.sizes} />
 
 <svelte:head>
 	<title>{title}</title>

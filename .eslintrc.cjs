@@ -66,6 +66,9 @@ const typescript = {
 const unicorn = {
 	extends: ['plugin:unicorn/recommended'],
 	plugins: ['unicorn'],
+	rules: {
+		'unicorn/prefer-node-protocol': 'off',
+	},
 }
 
 const merge = require('deepmerge').all
