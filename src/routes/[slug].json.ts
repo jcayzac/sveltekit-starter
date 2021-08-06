@@ -1,14 +1,16 @@
 import articles from '$lib/articles'
 import type { RequestHandler, EndpointOutput } from '@sveltejs/kit'
 
-const body = (x) => ({ body: x })
+const body = x => ({ body: x })
 const notFound = () => ({ status: 404 })
 
 const handleIndexRequest = async (query): Promise<EndpointOutput> => {
-	return body({articles:[...articles.entries()].map(([slug, module]) => {
-		const { metadata } = module
-		return { slug, ...metadata }
-	})})
+	return body({
+		articles: [...articles.entries()].map(([slug, module]) => {
+			const { metadata } = module
+			return { slug, ...metadata }
+		}),
+	})
 }
 
 const handleArticleRequest = async (slug): Promise<EndpointOutput | undefined> => {

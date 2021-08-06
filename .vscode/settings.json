@@ -4,5 +4,11 @@
     "**/build": true,
     "**/node_modules": true,
     "**/static/g": true
-  }
+  },
+  "markdownlint.config": {
+    "default": true,
+    "no-inline-html": false
+  },
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "javascript.validate.enable": false
 }

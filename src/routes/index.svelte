@@ -1,13 +1,13 @@
 <script context="module" lang="ts">
 	export const prerender = true
 
-	export const load = async({ fetch }) => {
+	export const load = async ({ fetch }) => {
 		const response = await fetch(`./index.json`)
 		const { articles } = await response.json()
 		return {
 			props: {
 				articles,
-			}
+			},
 		}
 	}
 </script>
@@ -17,7 +17,6 @@
 	import Timer from '$lib/Timer.svelte'
 	import ToggleTheme from '$lib/ToggleTheme.svelte'
 	import { theme } from '$lib/theme'
-
 	export let articles
 </script>
 
@@ -42,8 +41,8 @@
 
 <h2>Articles (Through endpoint)</h2>
 <ul>
-	{#each articles as {slug, title}}
-		<li><a href="{slug}">{title}</a></li>
+	{#each articles as { slug, title }}
+		<li><a href={slug}>{title}</a></li>
 	{/each}
 </ul>
 

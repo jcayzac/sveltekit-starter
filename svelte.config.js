@@ -24,19 +24,17 @@ const config = {
 		adapter: ssr(),
 		target: '#svelte',
 		vite: {
-      optimizeDeps: {
-        include: ['blurhash'],
-      },
-			plugins: [
-				imagetools(),
-			],
+			optimizeDeps: {
+				include: ['blurhash'],
+			},
+			plugins: [imagetools()],
 			resolve: {
 				alias: {
 					$images: path.resolve('src/images'),
 					$routes: path.resolve('src/routes'),
 				},
-			}
-    },
+			},
+		},
 	},
 }
 

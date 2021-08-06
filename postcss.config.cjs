@@ -3,13 +3,13 @@ const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
 
 const mode = process.env.NODE_ENV
-const dev = mode === 'development'
+const development = mode === 'development'
 
 module.exports = {
 	plugins: [
 		tailwindcss,
 		autoprefixer,
-		!dev &&
+		!development &&
 			cssnano({
 				preset: 'default',
 			}),
