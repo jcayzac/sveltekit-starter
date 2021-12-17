@@ -1,7 +1,7 @@
 /**
  * @type {import('@types/eslint').Linter.Config}
  */
- module.exports = {
+module.exports = {
 	plugins: ['jsdoc'],
 	extends: ['plugin:jsdoc/recommended'],
 	rules: {

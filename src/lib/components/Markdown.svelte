@@ -1,7 +1,8 @@
 <script context="module" lang="ts">
+	import code from './BlockOfCode.svelte'
 	import p from './Li2.svelte'
 	import li from './Li.svelte'
-	export { p, li }
+	export { p, li, code }
 </script>
 
 <script>

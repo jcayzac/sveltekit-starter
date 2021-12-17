@@ -1,12 +1,12 @@
 {
   "private": true,
   "volta": {
-    "node": "16.5.0"
+    "node": "17.4.0"
   },
   "engines": {
-    "npm": "!*",
-    "yarn": "!*",
-    "node": "^16.5.0"
+    "npm": "forbidden, use pnpm",
+    "yarn": "forbidden, use pnpm",
+    "node": "^17.4.0"
   },
   "scripts": {
     "build": "svelte-kit build",
@@ -51,6 +51,7 @@
     "shiki": "^0.9.6",
     "svelte": "^3.42.1",
     "svelte-check": "^2.2.4",
+    "svelte-parse": "^0.1.0",
     "svelte-preprocess": "^4.7.4",
     "tailwindcss": "^2.2.7",
     "tslib": "^2.3.0",

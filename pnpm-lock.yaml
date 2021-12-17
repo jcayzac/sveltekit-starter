@@ -31,6 +31,7 @@ specifiers:
   shiki: ^0.9.6
   svelte: ^3.42.1
   svelte-check: ^2.2.4
+  svelte-parse: ^0.1.0
   svelte-preprocess: ^4.7.4
   tailwindcss: ^2.2.7
   tslib: ^2.3.0
@@ -71,6 +72,7 @@ devDependencies:
   shiki: 0.9.6
   svelte: 3.42.1
   svelte-check: 2.2.4_37293621677b5d618de2277fe18a7b92
+  svelte-parse: 0.1.0
   svelte-preprocess: 4.7.4_0230e0d6e615847d9e5f4e7b2174f0e6
   tailwindcss: 2.2.7_7b69a43ec4689fa7484dee35f79a7806
   tslib: 2.3.0
@@ -3507,6 +3509,12 @@ packages:
       has-flag: 4.0.0
     dev: true
 
+  /svast/0.2.0:
+    resolution: {integrity: sha512-1Ik0uj5+c0gIGLZn3XQ1Cyy03co+24GgY+p701DAWOZX+fD4L4ZEUyWu2BR2F99tbIMJj4RoyRp8+0AcBZXx/g==}
+    dependencies:
+      '@types/unist': 2.0.6
+    dev: true
+
   /svelte-check/2.2.4_37293621677b5d618de2277fe18a7b92:
     resolution: {integrity: sha512-eGEuZ3UEanOhlpQhICLjKejDxcZ9uYJlGnBGKAPW7uugolaBE6HpEBIiKFZN/TMRFFHQUURgGvsVn8/HJUBfeQ==}
     hasBin: true
@@ -3542,6 +3550,12 @@ packages:
       svelte: '>=3.19.0'
     dependencies:
       svelte: 3.42.1
+    dev: true
+
+  /svelte-parse/0.1.0:
+    resolution: {integrity: sha512-p+J8OFMwQ1GDN+pdvnRBJMIGDffkz0edG2EKvGk6b0TqLthhkbxZuy8v0Wj5N/JdFFYp/rpPvxxMmGPD4JOHGA==}
+    dependencies:
+      svast: 0.2.0
     dev: true
 
   /svelte-preprocess/4.7.4_0230e0d6e615847d9e5f4e7b2174f0e6:

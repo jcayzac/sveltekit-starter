@@ -14,10 +14,9 @@ const resolve = (route, source) =>
 const makeImport = (name, source, transformations) =>
 	`import ${name} from '${source}?${transformations}&webp&srcset';`
 
-
 /**
  * Promotes lone elements of a paragraph to block elements if they have allowed tag names.
- * 
+ *
  * @typedef {import('@types/unist').Node} Node
  * @type {(tree: Node) => Promise<Node>}
  */

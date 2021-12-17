@@ -1,8 +1,8 @@
 /**
  * @typedef {import('@types/hast').Element} Element
- * @type {(Element, string) => boolean}
+ * @type {(element: Element?, tag: string) => boolean}
  */
 export const isTag = (element, tag) => {
-	const { tagName } = element
-	return tagName === tag || tagName === `Components.${tag}`
+	const { tagName, type } = { ...element }
+	return type === 'element' && (tagName === tag || tagName === `Components.${tag}`)
 }
