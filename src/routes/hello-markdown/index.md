@@ -10,7 +10,7 @@ import Counter from '$lib/Counter.svelte'
 
 _Photo by [CRYSTALWEED cannabis](https://unsplash.com/@crystalweed?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/t/food-drink?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)._
 
-<!-- @classes boo artboard artboard-demo -->
+<!-- @classes artboard artboard-demo -->
 
 ![second image](./crap.jpg?boo 'this is a title')
 

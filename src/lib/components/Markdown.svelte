@@ -17,20 +17,20 @@
 </svelte:head>
 
 <article class="cooked">
+	<style>
+		a {
+			@apply link;
+		}
+	
+		ol,
+		ul {
+			list-style: square;
+		}
+	</style>
+
 	<header>
 		<h1>{title}</h1>
 	</header>
 
 	<slot />
 </article>
-
-<style>
-	a {
-		@apply link;
-	}
-
-	ol,
-	ul {
-		list-style: square;
-	}
-</style>

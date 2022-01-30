@@ -44,8 +44,11 @@ const config = {
 						}
 					}
 
-					const routeToPath = async (route) => {
+					const resolveId = async (route) => {
+						// Resolve the route to an absolute path
 						const basePath = path.join(routes, route)
+
+						// Try to find the index file
 						const basePathWithExtension = basePath + EXTENSION
 						const indexPath = path.join(basePath, 'index' + EXTENSION)
 						const filePath = (await exists(basePathWithExtension))
@@ -53,23 +56,15 @@ const config = {
 							: ((await exists(indexPath))
 								? indexPath
 								: undefined)
-						if (filePath !== undefined) {
-							return PREFIX + filePath
-						}
-					}
 
-					const resolveId = async (id) => {
-						console.error(`>>> RESOLVING:`, id)
-						if (id.endsWith(EXTENSION)) {
-							return
+						if (filePath !== undefined) {
+							return `${PREFIX}${filePath}.md2resolved`
 						}
-						return routeToPath(id)
 					}
 
 					const load = (id) => {
-						console.error(`>>> LOADING:`, id)
 						if (id.startsWith(PREFIX)) {
-							console.error(`>>>>>>>>>>>>>>>>>>>>>>>>>>>>>`)
+							// TODO: invole Svelte
 							return `export const msg = 'hello'`
 						}
 					}

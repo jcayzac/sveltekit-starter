@@ -47,6 +47,8 @@ const responsiveImages = async (tree, file) => {
 		}
 		export const metadata = _metadata;
 		`
+
+		console.error(`MODULE SCRIPT = ${moduleScript}`)
 	}
 
 	const imports = []
@@ -60,7 +62,7 @@ const responsiveImages = async (tree, file) => {
 		if (/^(?:[^:]+:)?\/\//.test(src)) return
 
 		// Resolve the URL
-		const [resolved, config] = resolve(route, src).split('?')
+		const [ resolved, config ] = resolve(route, src).split('?')
 		const { srcset, sizes } = getImageConfiguration(config, NORMAL_IMAGE_CONFIGURATION)
 
 		// Create an import for the srcset
