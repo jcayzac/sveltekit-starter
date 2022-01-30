@@ -69,6 +69,7 @@ const responsiveImages = async (tree, file) => {
 		imports.push(makeImport(`SrcSet${count}`, resolved, srcset))
 		node.properties.srcset = `{SrcSet${count}}`
 		node.properties.sizes = sizes
+		node.properties.loading=`lazy`
 		delete node.properties.src
 		if (config !== undefined) node.properties['data-responsive-config'] = config
 
