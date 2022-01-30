@@ -22,10 +22,11 @@ const handleArticleRequest = async (slug): Promise<EndpointOutput | undefined> =
 	return undefined
 }
 
-export const get: RequestHandler = async ({ params, query }): Promise<EndpointOutput> => {
+export const get: RequestHandler = async ({ params, url }): Promise<EndpointOutput> => {
 	const { slug } = params
+	const { searchParams } = url
 	console.error(`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`)
-	if (slug === 'index') return await handleIndexRequest(query)
+	if (slug === 'index') return await handleIndexRequest(searchParams)
 
 	const articleResponse = handleArticleRequest(slug)
 	if (articleResponse !== undefined) return articleResponse

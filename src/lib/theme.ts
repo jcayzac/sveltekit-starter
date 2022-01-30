@@ -1,5 +1,6 @@
 import { browser } from '$app/env'
-import { readable, writable, derived, Readable } from 'svelte/store'
+import type { Readable } from 'svelte'
+import { readable, writable, derived } from 'svelte/store'
 
 // Returns 'light' if the media query list / event matches
 function ligthIfMatch(event: MediaQueryList | MediaQueryListEvent) {

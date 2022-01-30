@@ -2,7 +2,7 @@
 const config = {
 	mode: 'jit',
 	darkMode: 'class',
-	purge: ['./src/**/*.{html,js,svelte,ts,md}'],
+	content: ['./src/**/*.{html,js,svelte,ts,md}'],
 	plugins: [require('daisyui')],
 
 	daisyui: {

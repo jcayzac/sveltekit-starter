@@ -14,9 +14,9 @@ const config = {
 		mdsvex(mdsvexConfig),
 		//imagePreprocessor,
 		preprocess({
-			defaults: {
-				style: 'postcss',
-			},
+			//defaults: {
+			//	style: 'postcss',
+			//},
 			postcss: true,
 		}),
 	],
