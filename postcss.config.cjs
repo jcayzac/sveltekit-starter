@@ -11,7 +11,14 @@ module.exports = {
 		autoprefixer,
 		!development &&
 			cssnano({
-				preset: 'default',
+				preset: [
+					'default',
+					{
+						discardComments: {
+							removeAll: true,
+						},
+					},
+				],
 			}),
 	],
 }
