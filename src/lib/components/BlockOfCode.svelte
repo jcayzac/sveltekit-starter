@@ -1,8 +1,9 @@
 <script lang="ts">
-	export let language: string = 'text'
-	export let title: string = 'title'
-
 	import { setContext } from 'svelte'
+
+	export let language = 'text'
+	export let title = 'title'
+
 	let lines = 0
 	setContext('LineNumber', {
 		index: () => ++lines,
@@ -10,5 +11,5 @@
 </script>
 
 <code {...$$props}>
-	<slot/>
+	<slot />
 </code>

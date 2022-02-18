@@ -21,7 +21,9 @@ const codeFences = async tree => {
 		}
 
 		const { className, meta } = child.properties
-		const language = className?.filter(c => c.startsWith('language-'))?.map(c => `language="${c.slice(9)}"`)?.[0]
+		const language = className
+			?.filter(c => c.startsWith('language-'))
+			?.map(c => `language="${c.slice(9)}"`)?.[0]
 
 		console.error(`NODE:`, node, child)
 	})

@@ -9,7 +9,6 @@ importOrder:
 printWidth: 100
 semi: false
 singleQuote: true
-svelteBracketNewLine: true
 svelteIndentScriptAndStyle: true
 svelteSortOrder: options-scripts-markup-styles
 svelteStrictMode: false

@@ -12,18 +12,13 @@ const config = {
 
 	preprocess: [
 		mdsvex(mdsvexConfig),
-		//imagePreprocessor,
 		preprocess({
-			//defaults: {
-			//	style: 'postcss',
-			//},
 			postcss: true,
 		}),
 	],
 
 	kit: {
 		adapter: ssr(),
-		target: '#svelte',
 		vite: {
 			optimizeDeps: {
 				include: ['blurhash'],
@@ -35,7 +30,7 @@ const config = {
 					const EXTENSION = '.md2'
 					const routes = path.resolve('src/routes')
 
-					const exists = async (path) => {
+					const exists = async path => {
 						try {
 							await fs.access(path, FS.R_OK)
 							return true
@@ -44,7 +39,7 @@ const config = {
 						}
 					}
 
-					const resolveId = async (route) => {
+					const resolveId = async route => {
 						// Resolve the route to an absolute path
 						const basePath = path.join(routes, route)
 
@@ -54,15 +49,15 @@ const config = {
 						const filePath = (await exists(basePathWithExtension))
 							? basePathWithExtension
 							: ((await exists(indexPath))
-								? indexPath
-								: undefined)
+							? indexPath
+							: undefined)
 
 						if (filePath !== undefined) {
 							return `${PREFIX}${filePath}.md2resolved`
 						}
 					}
 
-					const load = (id) => {
+					const load = id => {
 						if (id.startsWith(PREFIX)) {
 							// TODO: invole Svelte
 							return `export const msg = 'hello'`

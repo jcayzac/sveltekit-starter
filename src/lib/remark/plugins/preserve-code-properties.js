@@ -26,10 +26,7 @@ const preserveCodeProperties = tree => {
 			const properties = parse({
 				value: `<Foo ${meta} />`,
 				generatePositions: false,
-			})
-			.children[0]
-			.properties
-			?.map(({name, value}) => ({...value[0], name}))
+			}).children[0].properties?.map(({ name, value }) => ({ ...value[0], name }))
 
 			for (const property of properties) {
 				const { name, expression, value: input } = property
@@ -39,7 +36,6 @@ const preserveCodeProperties = tree => {
 
 				// Input values are passed as-is
 				if (input !== undefined) value = input
-
 				// Expressions are enclosed in curly braces
 				else if (expression !== undefined) value = `{${expression.value}}`
 

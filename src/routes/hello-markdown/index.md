@@ -36,6 +36,7 @@ foo:
 
 ```js highlight="1-3" numbers title={title} id="mycode"
 import { getHighlighter as configureShiki } from 'shiki'
+
 const shiki = configureShiki({ theme: 'nord' })
 export const highlight = async (code, lang) => {
   const { codeToHtml } = await shiki
@@ -45,8 +46,8 @@ export const highlight = async (code, lang) => {
 
 Inline `code` also works. ~one~ or ~~two~~ tildes.
 
-| a | b  |  c |  d  |
-| - | :- | -: | :-: |
+| a   | b   |   c |  d  |
+| --- | :-- | --: | :-: |
 
 - [ ] to do
 - [x] done

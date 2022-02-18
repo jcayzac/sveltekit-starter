@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { theme, themeOverride } from './theme'
+
 	const toggleTheme = () => {
 		$themeOverride = $theme === 'light' ? 'dark' : 'light'
 		const { documentElement } = document

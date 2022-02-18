@@ -17,6 +17,7 @@
 	import Timer from '$lib/Timer.svelte'
 	import ToggleTheme from '$lib/ToggleTheme.svelte'
 	import { theme } from '$lib/theme'
+
 	export let articles
 </script>
 

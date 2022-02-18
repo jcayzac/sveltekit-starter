@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
+
 	let timer = 0
 	let seconds: string
 	let minutes: string
