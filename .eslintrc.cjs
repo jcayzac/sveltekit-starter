@@ -1,4 +1,4 @@
-const merge = require('deepmerge').all
-const modules = require('require-glob').sync(`config/eslint/*.cjs`)
-const configs = Object.getOwnPropertyNames(modules).map(name => modules[name])
-module.exports = merge(configs)
+const deepmerge = require('deepmerge').all
+const glob = require('require-glob').sync
+
+module.exports = deepmerge(Object.values(glob('eslint/*.cjs')))
