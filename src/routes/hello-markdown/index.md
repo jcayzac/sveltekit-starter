@@ -35,9 +35,6 @@ foo:
 ```
 
 ```js highlight="1-3" numbers title={title} id="mycode"
-import { getHighlighter as configureShiki } from 'shiki'
-
-const shiki = configureShiki({ theme: 'nord' })
 export const highlight = async (code, lang) => {
   const { codeToHtml } = await shiki
   return codeToHtml(code, lang)

@@ -1,6 +1,9 @@
 import { visit } from 'unist-util-visit'
 import { isTag } from '../utils/is-tag.js'
 
+//import { getHighlighter as configureShiki } from 'shiki'
+//const shiki = configureShiki({theme: 'nord'})
+
 /**
  * Parse and transform code fences.
  *
@@ -25,7 +28,7 @@ const codeFences = async tree => {
 			?.filter(c => c.startsWith('language-'))
 			?.map(c => `language="${c.slice(9)}"`)?.[0]
 
-		console.error(`NODE:`, { node, child, meta, language })
+		//console.error(`NODE:`, { node, child, meta, language })
 	})
 }
 
