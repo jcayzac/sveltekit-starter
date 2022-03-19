@@ -19,6 +19,9 @@ const config = {
 	],
 
 	kit: {
+		prerender: {
+			default: true,
+		},
 		adapter: ssr(),
 		vite: {
 			optimizeDeps: {

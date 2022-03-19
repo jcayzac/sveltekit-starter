@@ -5,9 +5,9 @@ import { isTag } from '../utils/is-tag.js'
  * Promotes lone elements of a paragraph to block elements if they have allowed tag names.
  *
  * @typedef {import('@types/unist').Node} Node
- * @type {(tree: Node) => Promise<Node>}
+ * @type {(tree: Node) => null}
  */
-const blockify = async tree => {
+const blockify = tree => {
 	visit(tree, { type: 'element' }, node => {
 		if (!isTag(node, 'p')) {
 			return

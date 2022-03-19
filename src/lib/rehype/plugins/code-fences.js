@@ -5,7 +5,7 @@ import { isTag } from '../utils/is-tag.js'
  * Parse and transform code fences.
  *
  * @typedef {import('@types/unist').Node} Node
- * @type {(tree: Node) => Promise<Node>}
+ * @type {(tree: Node) => null}
  */
 const codeFences = async tree => {
 	visit(tree, { type: 'element' }, node => {
