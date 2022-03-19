@@ -22,6 +22,7 @@ overrides:
     options:
       parser: meriyah
   - files:
+      - '*.md'
       - '*.mdx'
       - '*.svx'
     options:

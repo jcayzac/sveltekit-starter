@@ -14,7 +14,7 @@
     "check:eslint": "eslint .",
     "check:prettier": "prettier --check --plugin-search-dir=. .",
     "check": "pnpm run check:prettier && pnpm run check:eslint && pnpm run check:svelte",
-    "dev": "svelte-kit dev",
+    "dev": "svelte-kit dev --host",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write --plugin-search-dir=. .",
     "fix": "pnpm run fix:prettier && pnpm run fix:eslint",
