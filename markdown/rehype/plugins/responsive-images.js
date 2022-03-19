@@ -56,7 +56,7 @@ const responsiveImages = async (tree, file) => {
 	visit(tree, { type: 'element' }, node => {
 		if (!isTag(node, 'img')) return
 
-		const { src, alt, title } = node.properties
+		const { src } = node.properties
 
 		// Ignore non-local images
 		if (/^(?:[^:]+:)?\/\//.test(src)) return
@@ -81,10 +81,7 @@ const responsiveImages = async (tree, file) => {
 		node.value = value
 			.replace(
 				/(?<=<script[^>]+?context=["']module["'][^>]*?>).+?(?=<\/script>)/s,
-				source =>
-					`
-				${moduleScript}
-				`,
+				moduleScript,
 			)
 			.replace(
 				/(?<=<script(?: lang=["']ts["'])?>).+?(?=<\/script>)/s,
@@ -99,8 +96,6 @@ const responsiveImages = async (tree, file) => {
 	tree.children = tree.children.filter(({ type, value }) => {
 		return type !== 'text' || value !== '\n'
 	})
-
-	//console.error(`TREE`, JSON.stringify(tree.children, null, 2))
 }
 
 export default () => responsiveImages

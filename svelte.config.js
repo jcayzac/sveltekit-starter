@@ -1,5 +1,5 @@
 import { mdsvex } from 'mdsvex'
-import mdsvexConfig from './mdsvex.config.js'
+import mdsvexConfig from './markdown/mdsvex.config.js'
 import { imagetools } from 'vite-imagetools'
 import ssr from '@sveltejs/adapter-static'
 import preprocess from 'svelte-preprocess'

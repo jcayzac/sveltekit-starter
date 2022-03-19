@@ -24,7 +24,7 @@ module.exports = {
 			},
 		},
 	],
-	ignorePatterns: ['.eslintrc.cjs', 'build', 'node_modules', 'package-lock.json'],
+	ignorePatterns: ['.svelte-kit', 'build', 'node_modules', 'package-lock.json'],
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 2019,
