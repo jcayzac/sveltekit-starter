@@ -47,8 +47,6 @@ const responsiveImages = async (tree, file) => {
 		}
 		export const metadata = _metadata;
 		`
-
-		console.error(`MODULE SCRIPT = ${moduleScript}`)
 	}
 
 	const imports = []

@@ -3,7 +3,6 @@ import rehypeBlockify from './rehype/plugins/blockify.js'
 import rehypeResponsiveImages from './rehype/plugins/responsive-images.js'
 import rehypeCodeFences from './rehype/plugins/code-fences.js'
 import remarkPreserveCodeProperties from './remark/plugins/preserve-code-properties.js'
-//import { highlight } from './markdown/highlighter.js'
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const config = {

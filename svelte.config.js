@@ -63,7 +63,7 @@ const config = {
 
 					const load = id => {
 						if (id.startsWith(PREFIX)) {
-							// TODO: invole Svelte
+							// TODO: invoke Svelte
 							return `export const msg = 'hello'`
 						}
 					}

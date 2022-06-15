@@ -5,6 +5,7 @@ const preserveCodeProperties = tree => {
 	visit(tree, 'code', node => {
 		if (node.data === undefined) node.data = {}
 		const { meta, lang, data, value } = node
+		console.error(`OH NOES:`, node)
 
 		if (data.hProperties === undefined) data.hProperties = {}
 		const { hProperties } = data
@@ -30,6 +31,7 @@ const preserveCodeProperties = tree => {
 
 			for (const property of properties) {
 				const { name, expression, value: input } = property
+				if (name === 'null') { continue }
 
 				// Properties with no value are just truish
 				let value = '{true}'

@@ -1,8 +1,9 @@
 <script context="module" lang="ts">
-	import code from './BlockOfCode.svelte'
+	import CodeFence from './CodeFence.svelte'
+	import CodeLine from './CodeLine.svelte'
 	import p from './Li2.svelte'
 	import li from './Li.svelte'
-	export { p, li, code }
+	export { p, li, CodeFence, CodeLine }
 </script>
 
 <script>
